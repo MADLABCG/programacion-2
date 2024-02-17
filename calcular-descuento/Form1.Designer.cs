@@ -79,6 +79,7 @@
             // 
             // nPorcentaje
             // 
+            nPorcentaje.DecimalPlaces = 2;
             nPorcentaje.Location = new Point(113, 108);
             nPorcentaje.Name = "nPorcentaje";
             nPorcentaje.Size = new Size(150, 27);
@@ -86,7 +87,9 @@
             // 
             // nPrecio
             // 
+            nPrecio.DecimalPlaces = 2;
             nPrecio.Location = new Point(113, 66);
+            nPrecio.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             nPrecio.Name = "nPrecio";
             nPrecio.Size = new Size(150, 27);
             nPrecio.TabIndex = 4;
