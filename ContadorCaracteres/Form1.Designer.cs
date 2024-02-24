@@ -75,13 +75,19 @@
             lblConteo = new Label();
             btnContar = new Button();
             panel3 = new Panel();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            label21 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label21);
             panel1.Controls.Add(lblTotal);
             panel1.Controls.Add(txtParrafo);
             panel1.Location = new Point(23, 21);
@@ -93,7 +99,7 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.ImageAlign = ContentAlignment.MiddleRight;
-            lblTotal.Location = new Point(702, 216);
+            lblTotal.Location = new Point(137, 216);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(17, 20);
             lblTotal.TabIndex = 42;
@@ -110,36 +116,10 @@
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(panel5);
+            panel2.Controls.Add(panel4);
             panel2.Controls.Add(lblNumeros);
             panel2.Controls.Add(label20);
-            panel2.Controls.Add(lblSimbolo9);
-            panel2.Controls.Add(label19);
-            panel2.Controls.Add(lblTilde5);
-            panel2.Controls.Add(lblTilde4);
-            panel2.Controls.Add(lblTilde3);
-            panel2.Controls.Add(lblTilde2);
-            panel2.Controls.Add(lblTilde1);
-            panel2.Controls.Add(label18);
-            panel2.Controls.Add(label17);
-            panel2.Controls.Add(label16);
-            panel2.Controls.Add(label15);
-            panel2.Controls.Add(label14);
-            panel2.Controls.Add(lblSimbolo8);
-            panel2.Controls.Add(lblSimbolo7);
-            panel2.Controls.Add(lblSimbolo6);
-            panel2.Controls.Add(lblSimbolo5);
-            panel2.Controls.Add(lblSimbolo4);
-            panel2.Controls.Add(lblSimbolo3);
-            panel2.Controls.Add(lblSimbolo2);
-            panel2.Controls.Add(label13);
-            panel2.Controls.Add(label12);
-            panel2.Controls.Add(label11);
-            panel2.Controls.Add(label10);
-            panel2.Controls.Add(label9);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(label7);
-            panel2.Controls.Add(lblSimbolo1);
-            panel2.Controls.Add(label6);
             panel2.Controls.Add(lblTildes);
             panel2.Controls.Add(lblSimbolos);
             panel2.Controls.Add(label5);
@@ -155,7 +135,7 @@
             panel2.Controls.Add(panel3);
             panel2.Location = new Point(24, 279);
             panel2.Name = "panel2";
-            panel2.Size = new Size(748, 142);
+            panel2.Size = new Size(748, 148);
             panel2.TabIndex = 1;
             // 
             // lblNumeros
@@ -179,7 +159,7 @@
             // lblSimbolo9
             // 
             lblSimbolo9.AutoSize = true;
-            lblSimbolo9.Location = new Point(246, 80);
+            lblSimbolo9.Location = new Point(46, 10);
             lblSimbolo9.Name = "lblSimbolo9";
             lblSimbolo9.Size = new Size(17, 20);
             lblSimbolo9.TabIndex = 39;
@@ -188,16 +168,17 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(162, 80);
+            label19.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label19.Location = new Point(4, 6);
             label19.Name = "label19";
-            label19.Size = new Size(82, 20);
+            label19.Size = new Size(42, 23);
             label19.TabIndex = 38;
-            label19.Text = "Simbolo \" :";
+            label19.Text = "\" ->";
             // 
             // lblTilde5
             // 
             lblTilde5.AutoSize = true;
-            lblTilde5.Location = new Point(712, 47);
+            lblTilde5.Location = new Point(39, 102);
             lblTilde5.Name = "lblTilde5";
             lblTilde5.Size = new Size(17, 20);
             lblTilde5.TabIndex = 37;
@@ -206,7 +187,7 @@
             // lblTilde4
             // 
             lblTilde4.AutoSize = true;
-            lblTilde4.Location = new Point(712, 16);
+            lblTilde4.Location = new Point(39, 78);
             lblTilde4.Name = "lblTilde4";
             lblTilde4.Size = new Size(17, 20);
             lblTilde4.TabIndex = 36;
@@ -215,7 +196,7 @@
             // lblTilde3
             // 
             lblTilde3.AutoSize = true;
-            lblTilde3.Location = new Point(611, 47);
+            lblTilde3.Location = new Point(39, 56);
             lblTilde3.Name = "lblTilde3";
             lblTilde3.Size = new Size(17, 20);
             lblTilde3.TabIndex = 35;
@@ -224,7 +205,7 @@
             // lblTilde2
             // 
             lblTilde2.AutoSize = true;
-            lblTilde2.Location = new Point(611, 16);
+            lblTilde2.Location = new Point(39, 34);
             lblTilde2.Name = "lblTilde2";
             lblTilde2.Size = new Size(17, 20);
             lblTilde2.TabIndex = 34;
@@ -233,7 +214,7 @@
             // lblTilde1
             // 
             lblTilde1.AutoSize = true;
-            lblTilde1.Location = new Point(510, 111);
+            lblTilde1.Location = new Point(39, 9);
             lblTilde1.Name = "lblTilde1";
             lblTilde1.Size = new Size(17, 20);
             lblTilde1.TabIndex = 33;
@@ -242,52 +223,57 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(644, 47);
+            label18.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label18.Location = new Point(2, 101);
             label18.Name = "label18";
-            label18.Size = new Size(61, 20);
+            label18.Size = new Size(39, 20);
             label18.TabIndex = 32;
-            label18.Text = "Tilde ú :";
+            label18.Text = "ú ->";
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(644, 15);
+            label17.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label17.Location = new Point(2, 77);
             label17.Name = "label17";
-            label17.Size = new Size(62, 20);
+            label17.Size = new Size(39, 20);
             label17.TabIndex = 31;
-            label17.Text = "Tilde ó :";
+            label17.Text = "ó ->";
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(548, 47);
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label16.Location = new Point(4, 55);
             label16.Name = "label16";
-            label16.Size = new Size(57, 20);
+            label16.Size = new Size(34, 20);
             label16.TabIndex = 30;
-            label16.Text = "Tilde í :";
+            label16.Text = "í ->";
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(544, 16);
+            label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label15.Location = new Point(0, 32);
             label15.Name = "label15";
-            label15.Size = new Size(61, 20);
+            label15.Size = new Size(38, 20);
             label15.TabIndex = 29;
-            label15.Text = "Tilde é :";
+            label15.Text = "é ->";
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(425, 111);
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label14.Location = new Point(2, 8);
             label14.Name = "label14";
-            label14.Size = new Size(61, 20);
+            label14.Size = new Size(38, 20);
             label14.TabIndex = 28;
-            label14.Text = "Tilde á :";
+            label14.Text = "á ->";
             // 
             // lblSimbolo8
             // 
             lblSimbolo8.AutoSize = true;
-            lblSimbolo8.Location = new Point(246, 111);
+            lblSimbolo8.Location = new Point(46, 34);
             lblSimbolo8.Name = "lblSimbolo8";
             lblSimbolo8.Size = new Size(17, 20);
             lblSimbolo8.TabIndex = 27;
@@ -296,7 +282,7 @@
             // lblSimbolo7
             // 
             lblSimbolo7.AutoSize = true;
-            lblSimbolo7.Location = new Point(510, 80);
+            lblSimbolo7.Location = new Point(115, 80);
             lblSimbolo7.Name = "lblSimbolo7";
             lblSimbolo7.Size = new Size(17, 20);
             lblSimbolo7.TabIndex = 26;
@@ -305,7 +291,7 @@
             // lblSimbolo6
             // 
             lblSimbolo6.AutoSize = true;
-            lblSimbolo6.Location = new Point(510, 47);
+            lblSimbolo6.Location = new Point(115, 55);
             lblSimbolo6.Name = "lblSimbolo6";
             lblSimbolo6.Size = new Size(17, 20);
             lblSimbolo6.TabIndex = 25;
@@ -314,7 +300,7 @@
             // lblSimbolo5
             // 
             lblSimbolo5.AutoSize = true;
-            lblSimbolo5.Location = new Point(510, 15);
+            lblSimbolo5.Location = new Point(115, 34);
             lblSimbolo5.Name = "lblSimbolo5";
             lblSimbolo5.Size = new Size(17, 20);
             lblSimbolo5.TabIndex = 24;
@@ -323,7 +309,7 @@
             // lblSimbolo4
             // 
             lblSimbolo4.AutoSize = true;
-            lblSimbolo4.Location = new Point(388, 111);
+            lblSimbolo4.Location = new Point(115, 10);
             lblSimbolo4.Name = "lblSimbolo4";
             lblSimbolo4.Size = new Size(17, 20);
             lblSimbolo4.TabIndex = 23;
@@ -332,7 +318,7 @@
             // lblSimbolo3
             // 
             lblSimbolo3.AutoSize = true;
-            lblSimbolo3.Location = new Point(388, 80);
+            lblSimbolo3.Location = new Point(46, 104);
             lblSimbolo3.Name = "lblSimbolo3";
             lblSimbolo3.Size = new Size(17, 20);
             lblSimbolo3.TabIndex = 22;
@@ -341,7 +327,7 @@
             // lblSimbolo2
             // 
             lblSimbolo2.AutoSize = true;
-            lblSimbolo2.Location = new Point(388, 47);
+            lblSimbolo2.Location = new Point(46, 79);
             lblSimbolo2.Name = "lblSimbolo2";
             lblSimbolo2.Size = new Size(17, 20);
             lblSimbolo2.TabIndex = 21;
@@ -350,70 +336,77 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(161, 111);
+            label13.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label13.Location = new Point(6, 29);
             label13.Name = "label13";
-            label13.Size = new Size(79, 20);
+            label13.Size = new Size(39, 23);
             label13.TabIndex = 20;
-            label13.Text = "Simbolo : :";
+            label13.Text = ": ->";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(425, 80);
+            label12.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label12.Location = new Point(74, 77);
             label12.Name = "label12";
-            label12.Size = new Size(79, 20);
+            label12.Size = new Size(39, 23);
             label12.TabIndex = 19;
-            label12.Text = "Simbolo ; :";
+            label12.Text = "; ->";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(425, 47);
+            label11.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label11.Location = new Point(74, 52);
             label11.Name = "label11";
-            label11.Size = new Size(79, 20);
+            label11.Size = new Size(39, 23);
             label11.TabIndex = 18;
-            label11.Text = "Simbolo . :";
+            label11.Text = ". ->";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(425, 16);
+            label10.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label10.Location = new Point(72, 29);
             label10.Name = "label10";
-            label10.Size = new Size(79, 20);
+            label10.Size = new Size(44, 23);
             label10.TabIndex = 17;
-            label10.Text = "Simbolo , :";
+            label10.Text = " , ->";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(302, 111);
+            label9.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label9.Location = new Point(72, 7);
             label9.Name = "label9";
-            label9.Size = new Size(83, 20);
+            label9.Size = new Size(41, 23);
             label9.TabIndex = 16;
-            label9.Text = "Simbolo ¿ :";
+            label9.Text = "¿ ->";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(302, 80);
+            label8.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label8.Location = new Point(6, 101);
             label8.Name = "label8";
-            label8.Size = new Size(83, 20);
+            label8.Size = new Size(41, 23);
             label8.TabIndex = 15;
-            label8.Text = "Simbolo ? :";
+            label8.Text = "? ->";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(302, 47);
+            label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label7.Location = new Point(6, 77);
             label7.Name = "label7";
-            label7.Size = new Size(80, 20);
+            label7.Size = new Size(40, 23);
             label7.TabIndex = 14;
-            label7.Text = "Simbolo ¡ :";
+            label7.Text = "¡ ->";
             // 
             // lblSimbolo1
             // 
             lblSimbolo1.AutoSize = true;
-            lblSimbolo1.Location = new Point(388, 16);
+            lblSimbolo1.Location = new Point(46, 54);
             lblSimbolo1.Name = "lblSimbolo1";
             lblSimbolo1.Size = new Size(17, 20);
             lblSimbolo1.TabIndex = 13;
@@ -422,11 +415,12 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(302, 16);
+            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label6.Location = new Point(6, 52);
             label6.Name = "label6";
-            label6.Size = new Size(80, 20);
+            label6.Size = new Size(40, 23);
             label6.TabIndex = 12;
-            label6.Text = "Simbolo ! :";
+            label6.Text = "! ->";
             // 
             // lblTildes
             // 
@@ -529,7 +523,7 @@
             // 
             // btnContar
             // 
-            btnContar.Location = new Point(548, 80);
+            btnContar.Location = new Point(537, 47);
             btnContar.Name = "btnContar";
             btnContar.Size = new Size(181, 48);
             btnContar.TabIndex = 0;
@@ -545,11 +539,64 @@
             panel3.Size = new Size(136, 134);
             panel3.TabIndex = 42;
             // 
+            // panel4
+            // 
+            panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Controls.Add(label19);
+            panel4.Controls.Add(lblSimbolo9);
+            panel4.Controls.Add(label13);
+            panel4.Controls.Add(lblSimbolo8);
+            panel4.Controls.Add(label6);
+            panel4.Controls.Add(lblSimbolo1);
+            panel4.Controls.Add(label7);
+            panel4.Controls.Add(lblSimbolo2);
+            panel4.Controls.Add(label8);
+            panel4.Controls.Add(lblSimbolo3);
+            panel4.Controls.Add(label9);
+            panel4.Controls.Add(lblSimbolo4);
+            panel4.Controls.Add(lblSimbolo7);
+            panel4.Controls.Add(label10);
+            panel4.Controls.Add(label12);
+            panel4.Controls.Add(lblSimbolo6);
+            panel4.Controls.Add(lblSimbolo5);
+            panel4.Controls.Add(label11);
+            panel4.Location = new Point(283, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(146, 134);
+            panel4.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(label14);
+            panel5.Controls.Add(lblTilde1);
+            panel5.Controls.Add(label15);
+            panel5.Controls.Add(lblTilde5);
+            panel5.Controls.Add(lblTilde2);
+            panel5.Controls.Add(label18);
+            panel5.Controls.Add(lblTilde4);
+            panel5.Controls.Add(label16);
+            panel5.Controls.Add(lblTilde3);
+            panel5.Controls.Add(label17);
+            panel5.Location = new Point(435, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(63, 134);
+            panel5.TabIndex = 2;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(16, 216);
+            label21.Name = "label21";
+            label21.Size = new Size(115, 20);
+            label21.TabIndex = 43;
+            label21.Text = "Total Caracteres";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(787, 443);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Form1";
@@ -558,6 +605,10 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -610,5 +661,8 @@
         private Label label20;
         private Label lblTotal;
         private Panel panel3;
+        private Panel panel4;
+        private Panel panel5;
+        private Label label21;
     }
 }
