@@ -60,7 +60,7 @@ namespace SelectorColores
 
             Color personalizado = Color.FromArgb(transparencia, rojo, verde, azul);
             string nombre = "RGB(" + transparencia + "," + rojo + "," + verde + "," + azul + ")";
-            cambiarColor(personalizado,nombre);
+            cambiarColor(personalizado, nombre);
         }
 
         private void btbEjecutar_Click(object sender, EventArgs e)

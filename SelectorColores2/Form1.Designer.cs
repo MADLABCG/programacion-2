@@ -311,7 +311,7 @@
             Controls.Add(lblColor);
             Controls.Add(pColor);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Selector Colores";
             ((System.ComponentModel.ISupportInitialize)tbRojo).EndInit();
             ((System.ComponentModel.ISupportInitialize)tbVerde).EndInit();
             ((System.ComponentModel.ISupportInitialize)tbAzul).EndInit();
