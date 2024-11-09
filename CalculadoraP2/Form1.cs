@@ -45,6 +45,27 @@ namespace CalculadoraP2
 
         private void resolver()
         {
+            if(operador == "itbis" && numero1 != null)
+            {
+                resultado = numero1 * (double)18/100; //Punto Flotante CAST explicito
+                setPantalla("= " + resultado.ToString());
+                clearVariables();
+            }
+
+            if (operador == "inverso" && numero1 != null)
+            {
+                resultado = numero1 / 1.18; 
+                setPantalla("= " + resultado.ToString());
+                clearVariables();
+            }
+
+            if (operador == "cuadrado" && numero1 != null)
+            {
+                resultado = numero1 * numero1;
+                setPantalla("= " + resultado.ToString());
+                clearVariables();
+            }
+
             if (operador != null && numero1 != null && numero2 != null)
             {
 
@@ -57,6 +78,21 @@ namespace CalculadoraP2
                     case "restar":
                         resultado = numero1 - numero2;
                         setPantalla("= " +resultado.ToString());
+                        clearVariables();
+                        break;
+                    case "multiplicar":
+                        resultado = numero1 * numero2;
+                        setPantalla("= " + resultado.ToString());
+                        clearVariables();
+                        break;
+                    case "dividir":
+                        resultado = numero1 / numero2;
+                        setPantalla("= " + resultado.ToString());
+                        clearVariables();
+                        break;
+                    case "modulo":
+                        resultado = numero1 % numero2;
+                        setPantalla("= " + resultado.ToString());
                         clearVariables();
                         break;
                     default:
